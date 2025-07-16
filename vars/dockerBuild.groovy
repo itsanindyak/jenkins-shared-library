@@ -1,5 +1,5 @@
-def call(String DockerHubUserName, String ProjectName, String Tag){
-  echo "========Docker Build started========"
-  sh "docker build -t ${DockerHubUserName}/${ProjectName}:${ImageTag} ."
-  echo "========Docker Build Done========"
+def call(String imageName, String imageTag, String dockerUser) {
+    echo "========Docker Build started========"
+    sh "docker build -t ${dockerUser}/${imageName}:${imageTag} ."
+    echo "========Docker Build Done========"
 }
